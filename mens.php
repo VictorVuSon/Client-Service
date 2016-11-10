@@ -49,11 +49,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    			 </div>
 			 <div class="cssmenu">
 				<ul>
-					<li class="active"><a href="login.html">Account</a></li> |
-					<li><a href="checkout.html">Wishlist</a></li> |
-					<li><a href="checkout.html">Checkout</a></li> |
-					<li><a href="login.html">Log In</a></li> |
-					<li><a href="register.html">Sign Up</a></li>
+					<li class="active"><a href="login.php">Account</a></li> |
+					<li><a href="checkout.php">Wishlist</a></li> |
+					<li><a href="checkout.php">Checkout</a></li> |
+					<li><a href="login.php">Log In</a></li> |
+					<li><a href="register.php">Sign Up</a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -63,11 +63,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-					<a href="index.html"><img src="web/images/logo.png" alt=""/></a>
+					<a href="index.php"><img src="web/images/logo.png" alt=""/></a>
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
-			<li class="active grid"><a href="index.html">Home</a></li>
+			<li class="active grid"><a href="index.php">Home</a></li>
 			<li><a class="color4" href="#">women</a>
 				<div class="megapanel">
 					<div class="row">
@@ -75,10 +75,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="h_nav">
 								<h4>Contact Lenses</h4>
 								<ul>
-									<li><a href="womens.html">Daily-wear soft lenses</a></li>
-									<li><a href="womens.html">Extended-wear</a></li>
-									<li><a href="womens.html">Lorem ipsum </a></li>
-									<li><a href="womens.html">Planned replacement</a></li>
+									<li><a href="womens.php">Daily-wear soft lenses</a></li>
+									<li><a href="womens.php">Extended-wear</a></li>
+									<li><a href="womens.php">Lorem ipsum </a></li>
+									<li><a href="womens.php">Planned replacement</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -86,10 +86,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="h_nav">
 								<h4>Sun Glasses</h4>
 								<ul>
-									<li><a href="womens.html">Heart-Shaped</a></li>
-									<li><a href="womens.html">Square-Shaped</a></li>
-									<li><a href="womens.html">Round-Shaped</a></li>
-									<li><a href="womens.html">Oval-Shaped</a></li>
+									<li><a href="womens.php">Heart-Shaped</a></li>
+									<li><a href="womens.php">Square-Shaped</a></li>
+									<li><a href="womens.php">Round-Shaped</a></li>
+									<li><a href="womens.php">Oval-Shaped</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -97,11 +97,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="h_nav">
 								<h4>Eye Glasses</h4>
 								<ul>
-									<li><a href="womens.html">Anti Reflective</a></li>
-									<li><a href="womens.html">Aspheric</a></li>
-									<li><a href="womens.html">Bifocal</a></li>
-									<li><a href="womens.html">Hi-index</a></li>
-									<li><a href="womens.html">Progressive</a></li>
+									<li><a href="womens.php">Anti Reflective</a></li>
+									<li><a href="womens.php">Aspheric</a></li>
+									<li><a href="womens.php">Bifocal</a></li>
+									<li><a href="womens.php">Hi-index</a></li>
+									<li><a href="womens.php">Progressive</a></li>
 								</ul>	
 							</div>												
 						</div>
@@ -114,10 +114,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="h_nav">
 								<h4>Contact Lenses</h4>
 								<ul>
-									<li><a href="mens.html">Daily-wear soft lenses</a></li>
-									<li><a href="mens.html">Extended-wear</a></li>
-									<li><a href="mens.html">Lorem ipsum </a></li>
-									<li><a href="mens.html">Planned replacement</a></li>
+									<li><a href="mens.php">Daily-wear soft lenses</a></li>
+									<li><a href="mens.php">Extended-wear</a></li>
+									<li><a href="mens.php">Lorem ipsum </a></li>
+									<li><a href="mens.php">Planned replacement</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -125,10 +125,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="h_nav">
 								<h4>Sun Glasses</h4>
 								<ul>
-									<li><a href="mens.html">Heart-Shaped</a></li>
-									<li><a href="mens.html">Square-Shaped</a></li>
-									<li><a href="mens.html">Round-Shaped</a></li>
-									<li><a href="mens.html">Oval-Shaped</a></li>
+									<li><a href="mens.php">Heart-Shaped</a></li>
+									<li><a href="mens.php">Square-Shaped</a></li>
+									<li><a href="mens.php">Round-Shaped</a></li>
+									<li><a href="mens.php">Oval-Shaped</a></li>
 								</ul>	
 							</div>							
 						</div>
@@ -136,18 +136,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="h_nav">
 								<h4>Eye Glasses</h4>
 								<ul>
-									<li><a href="mens.html">Anti Reflective</a></li>
-									<li><a href="mens.html">Aspheric</a></li>
-									<li><a href="mens.html">Bifocal</a></li>
-									<li><a href="mens.html">Hi-index</a></li>
-									<li><a href="mens.html">Progressive</a></li>
+									<li><a href="mens.php">Anti Reflective</a></li>
+									<li><a href="mens.php">Aspheric</a></li>
+									<li><a href="mens.php">Bifocal</a></li>
+									<li><a href="mens.php">Hi-index</a></li>
+									<li><a href="mens.php">Progressive</a></li>
 								</ul>	
 							</div>												
 						</div>
 					</div>
 				</li>
-				<li><a class="color6" href="other.html">Other</a></li>
-				<li><a class="color7" href="other.html">Purchase</a></li>
+				<li><a class="color6" href="other.php">Other</a></li>
+				<li><a class="color7" href="other.php">Purchase</a></li>
 			</ul>
 			</div>
 		</div>
@@ -223,7 +223,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 			<div class="top-box">
 			 <div class="col_1_of_3 span_1_of_3"> 
-			   <a href="single.html">
+			   <a href="single.php">
 				<div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic.jpg" alt=""/>
@@ -243,7 +243,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                  </a>
 				</div>
 			   <div class="col_1_of_3 span_1_of_3">
-			   	 <a href="single.html">
+			   	 <a href="single.php">
 					<div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic1.jpg" alt=""/>
@@ -262,7 +262,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                    </a>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
-				 <a href="single.html">
+				 <a href="single.php">
 				  <div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic2.jpg" alt=""/>
@@ -286,7 +286,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>	
 			<div class="top-box">
 			  <div class="col_1_of_3 span_1_of_3">
-			  	 <a href="single.html">
+			  	 <a href="single.php">
 				 <div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic3.jpg" alt=""/>
@@ -305,7 +305,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                    </a>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
-					<a href="single.html">
+					<a href="single.php">
 					<div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic4.jpg" alt=""/>
@@ -325,7 +325,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                    </a>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
-				 <a href="single.html">
+				 <a href="single.php">
 				 <div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic5.jpg" alt=""/>
@@ -347,7 +347,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>	
 			<div class="top-box1">
 			  <div class="col_1_of_3 span_1_of_3">
-			  	 <a href="single.html">
+			  	 <a href="single.php">
 				 <div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic6.jpg" alt=""/>
@@ -367,7 +367,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                    </a>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
-				 <a href="single.html">
+				 <a href="single.php">
 					<div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic7.jpg" alt=""/>
@@ -388,7 +388,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                    </a>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
-				  <a href="single.html">
+				  <a href="single.php">
 				 <div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic8.jpg" alt=""/>
@@ -412,7 +412,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		 <h2 class="head">Staff Pick</h2>
 		  <div class="top-box1">
 			  <div class="col_1_of_3 span_1_of_3">
-			  	 <a href="single.html">
+			  	 <a href="single.php">
 				 <div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic8.jpg" alt=""/>
@@ -432,7 +432,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                    </a>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
-					 <a href="single.html">
+					 <a href="single.php">
 					<div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic4.jpg" alt=""/>
@@ -451,7 +451,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                    </a>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
-				 <a href="single.html">
+				 <a href="single.php">
 				 <div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic2.jpg" alt=""/>
@@ -475,7 +475,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		   <h2 class="head">New Products</h2>	
 		    <div class="section group">
 			  <div class="col_1_of_3 span_1_of_3">
-			  	 <a href="single.html">
+			  	 <a href="single.php">
 				 <div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic5.jpg" alt=""/>
@@ -495,7 +495,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                    </a>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
-					<a href="single.html">
+					<a href="single.php">
 					<div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic2.jpg" alt=""/>
@@ -515,7 +515,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                    </a>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
-				 <a href="single.html">
+				 <a href="single.php">
 				 <div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="web/images/pic3.jpg" alt=""/>
@@ -776,10 +776,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		            </div>
 		       <div class="f-list2">
 				<ul>
-					<li class="active"><a href="about.html">About Us</a></li> |
-					<li><a href="delivery.html">Delivery & Returns</a></li> |
-					<li><a href="delivery.html">Terms & Conditions</a></li> |
-					<li><a href="contact.html">Contact Us</a></li> 
+					<li class="active"><a href="about.php">About Us</a></li> |
+					<li><a href="delivery.php">Delivery & Returns</a></li> |
+					<li><a href="delivery.php">Terms & Conditions</a></li> |
+					<li><a href="contact.php">Contact Us</a></li> 
 				</ul>
 			  </div>
 				<div class="clear"></div>
