@@ -19,9 +19,12 @@ require_once 'web/inc/slide.php';
                     <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
                     <div class="price">
 					   <div class="cart-left">
-							<p class="title">Ten nhan hang</p>
+							<p class="title">Ten nha hang:</p>
 							<div class="price1">
 							  <span class="actual">Dia chi</span>
+							</div>
+							<div class="price1">
+							  <span class="actual">Rate:</span>
 							</div>
 						</div>
 						<div class="cart-right"> </div>
@@ -55,7 +58,7 @@ require_once 'web/inc/slide.php';
 					<div class="product_image">
 						<img src="web/images/pic2.jpg" alt=""/>
 					</div>
-                    <div class="sale-box1">
+                    <div class="sale-box1"><span class="on_sale title_shop">Sale</span></div>	
                     <div class="price">
 					   <div class="cart-left">
 							<p class="title">Lorem Ipsum simply</p>
@@ -72,7 +75,7 @@ require_once 'web/inc/slide.php';
 				</div>
 				<div class="clear"></div>
 			</div>	
-			<!-- <div class="top-box">
+			<div class="top-box">
 			  <div class="col_1_of_3 span_1_of_3">
 			  	 <a href="single.php">
 				 <div class="inner_content clearfix">
@@ -196,8 +199,8 @@ require_once 'web/inc/slide.php';
                    </a>
 				</div>
 				<div class="clear"></div>
-			</div> -->	
-		  <h2 class="head">TOP tuan</h2>
+			</div>	
+		  <h2 class="head">Top Tuan</h2>
 		  <div class="top-box1">
 			  <div class="col_1_of_3 span_1_of_3">
 			  	 <a href="single.php">
@@ -259,7 +262,7 @@ require_once 'web/inc/slide.php';
                    </a>
 				</div>
 				<div class="clear"></div>
-			</div>	
+			</div>			 						 			    
 		  </div>
 			<div class="rsidebar span_1_of_left">
 				<div class="top-border"> </div>
@@ -281,11 +284,13 @@ require_once 'web/inc/slide.php';
              </div>
               <div class="btn"><a href="single.php">Check it Out</a></div>
              </div>
+           <div class="top-border"> </div>
+			
 	    </div>
 	   <div class="clear"></div>
 	</div>
 	</div>
-	</div>
+</div>
  <?php
 require_once 'web/inc/footer.php';
 ?>
