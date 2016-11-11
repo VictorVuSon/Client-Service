@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Leoshop Website Template | Home :: w3layouts</title>
+<title>My Foody</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="web/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -42,91 +42,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-					<a href="index.php"><img src="web/images/logo.png" alt=""/></a>
+					<a href="index.php"><img src="web/images/foody.png" style="width:150px" alt=""/></a>
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
-			<li class="active grid"><a href="index.php">Home</a></li>
-			<li><a class="color4" href="#">women</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Contact Lenses</h4>
-								<ul>
-									<li><a href="womens.php">Daily-wear soft lenses</a></li>
-									<li><a href="womens.php">Extended-wear</a></li>
-									<li><a href="womens.php">Lorem ipsum </a></li>
-									<li><a href="womens.php">Planned replacement</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Sun Glasses</h4>
-								<ul>
-									<li><a href="womens.php">Heart-Shaped</a></li>
-									<li><a href="womens.php">Square-Shaped</a></li>
-									<li><a href="womens.php">Round-Shaped</a></li>
-									<li><a href="womens.php">Oval-Shaped</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Eye Glasses</h4>
-								<ul>
-									<li><a href="womens.php">Anti Reflective</a></li>
-									<li><a href="womens.php">Aspheric</a></li>
-									<li><a href="womens.php">Bifocal</a></li>
-									<li><a href="womens.php">Hi-index</a></li>
-									<li><a href="womens.php">Progressive</a></li>
-								</ul>	
-							</div>												
-						</div>
-					  </div>
-					</div>
+			<li class="active grid"><a href="index.php">Trang chu</a></li>
+			<li><a class="color4" href="#">Nha Hang moi</a>
 				</li>				
-				<li><a class="color5" href="#">Men</a>
+				<li><a class="color5" href="#">Kieu Nha Hang</a>
 				<div class="megapanel">
 					<div class="col1">
 							<div class="h_nav">
-								<h4>Contact Lenses</h4>
+								<h4>Top tuan</h4>
 								<ul>
-									<li><a href="mens.php">Daily-wear soft lenses</a></li>
-									<li><a href="mens.php">Extended-wear</a></li>
-									<li><a href="mens.php">Lorem ipsum </a></li>
-									<li><a href="mens.php">Planned replacement</a></li>
+									<li><a href="mens.php">Nha hang Y</a></li>
+									<li><a href="mens.php">Nha Hang Nhat</a></li>
+									<li><a href="mens.php">Nha Hang Trung Quoc</a></li>
+									<li><a href="mens.php">Nha hang Han Quoc</a></li>
+									<li><a href="mens.php">Thuc an nhanh</a></li>
 								</ul>	
 							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Sun Glasses</h4>
-								<ul>
-									<li><a href="mens.php">Heart-Shaped</a></li>
-									<li><a href="mens.php">Square-Shaped</a></li>
-									<li><a href="mens.php">Round-Shaped</a></li>
-									<li><a href="mens.php">Oval-Shaped</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Eye Glasses</h4>
-								<ul>
-									<li><a href="mens.php">Anti Reflective</a></li>
-									<li><a href="mens.php">Aspheric</a></li>
-									<li><a href="mens.php">Bifocal</a></li>
-									<li><a href="mens.php">Hi-index</a></li>
-									<li><a href="mens.php">Progressive</a></li>
-								</ul>	
-							</div>												
 						</div>
 					</div>
 				</li>
-				<li><a class="color6" href="other.php">Other</a></li>
-				<li><a class="color7" href="other.php">Purchase</a></li>
+				<li><a class="color6" href="other.php">Top tuan</a></li>
 			</ul>
 			</div>
 		</div>

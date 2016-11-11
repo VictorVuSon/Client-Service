@@ -1,10 +1,7 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
+<?php
+require_once 'web/inc/header.php';
+?>
+<!-- <!DOCTYPE HTML>
 <html>
 <head>
 <title>Free Leoshop Website Template | Single:: w3layouts</title>
@@ -13,11 +10,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="web/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="web/css/form.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
-<script src="web/js/jquery1.min.js"></script>
+<script src="web/js/jquery1.min.js"></script> -->
 <!-- start menu -->
-<link href="web/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<!-- <link href="web/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="web/js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script> -->
 <script type="text/javascript" src="web/js/jquery.jscrollpane.min.js"></script>
 		<script type="text/javascript" id="sourcecode">
 			$(function()
@@ -61,163 +58,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</script>	
 </head>
 <body>
-       <div class="header-top">
-			<div class="wrap"> 
-			  <div class="header-top-left">
-			  	   <div class="box">
-   				      <select tabindex="4" class="dropdown">
-							<option value="" class="label" value="">Language :</option>
-							<option value="1">English</option>
-							<option value="2">French</option>
-							<option value="3">German</option>
-					 </select>
-   				    </div>
-   				    <div class="box1">
-   				        <select tabindex="4" class="dropdown">
-							<option value="" class="label" value="">Currency :</option>
-							<option value="1">$ Dollar</option>
-							<option value="2">€ Euro</option>
-						</select>
-   				    </div>
-   				    <div class="clear"></div>
-   			 </div>
-			 <div class="cssmenu">
-				<ul>
-					<li class="active"><a href="login.php">Account</a></li> |
-					<li><a href="checkout.php">Wishlist</a></li> |
-					<li><a href="checkout.php">Checkout</a></li> |
-					<li><a href="login.php">Log In</a></li> |
-					<li><a href="register.php">Sign Up</a></li>
-				</ul>
-			</div>
-			<div class="clear"></div>
- 		</div>
-	</div>
-	<div class="header-bottom">
-	    <div class="wrap">
-			<div class="header-bottom-left">
-				<div class="logo">
-					<a href="index.php"><img src="web/images/logo.png" alt=""/></a>
-				</div>
-				<div class="menu">
-	            <ul class="megamenu skyblue">
-			<li class="active grid"><a href="index.php">Home</a></li>
-			<li><a class="color4" href="#">women</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Contact Lenses</h4>
-								<ul>
-									<li><a href="womens.php">Daily-wear soft lenses</a></li>
-									<li><a href="womens.php">Extended-wear</a></li>
-									<li><a href="womens.php">Lorem ipsum </a></li>
-									<li><a href="womens.php">Planned replacement</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Sun Glasses</h4>
-								<ul>
-									<li><a href="womens.php">Heart-Shaped</a></li>
-									<li><a href="womens.php">Square-Shaped</a></li>
-									<li><a href="womens.php">Round-Shaped</a></li>
-									<li><a href="womens.php">Oval-Shaped</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Eye Glasses</h4>
-								<ul>
-									<li><a href="womens.php">Anti Reflective</a></li>
-									<li><a href="womens.php">Aspheric</a></li>
-									<li><a href="womens.php">Bifocal</a></li>
-									<li><a href="womens.php">Hi-index</a></li>
-									<li><a href="womens.php">Progressive</a></li>
-								</ul>	
-							</div>												
-						</div>
-					  </div>
-					</div>
-				</li>				
-				<li><a class="color5" href="#">Men</a>
-				<div class="megapanel">
-					<div class="col1">
-							<div class="h_nav">
-								<h4>Contact Lenses</h4>
-								<ul>
-									<li><a href="mens.php">Daily-wear soft lenses</a></li>
-									<li><a href="mens.php">Extended-wear</a></li>
-									<li><a href="mens.php">Lorem ipsum </a></li>
-									<li><a href="mens.php">Planned replacement</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Sun Glasses</h4>
-								<ul>
-									<li><a href="mens.php">Heart-Shaped</a></li>
-									<li><a href="mens.php">Square-Shaped</a></li>
-									<li><a href="mens.php">Round-Shaped</a></li>
-									<li><a href="mens.php">Oval-Shaped</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Eye Glasses</h4>
-								<ul>
-									<li><a href="mens.php">Anti Reflective</a></li>
-									<li><a href="mens.php">Aspheric</a></li>
-									<li><a href="mens.php">Bifocal</a></li>
-									<li><a href="mens.php">Hi-index</a></li>
-									<li><a href="mens.php">Progressive</a></li>
-								</ul>	
-							</div>												
-						</div>
-					</div>
-				</li>
-				<li><a class="color6" href="other.php">Other</a></li>
-				<li><a class="color7" href="other.php">Purchase</a></li>
-			</ul>
-			</div>
-		</div>
-	   <div class="header-bottom-right">
-         <div class="search">	  
-				<input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-				<input type="submit" value="Subscribe" id="submit" name="submit">
-				<div id="response"> </div>
-		 </div>
-	  <div class="tag-list">
-	    <ul class="icon1 sub-icon1 profile_img">
-			<li><a class="active-icon c1" href="#"> </a>
-				<ul class="sub-icon1 list">
-					<li><h3>sed diam nonummy</h3><a href=""></a></li>
-					<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-				</ul>
-			</li>
-		</ul>
-		<ul class="icon1 sub-icon1 profile_img">
-			<li><a class="active-icon c2" href="#"> </a>
-				<ul class="sub-icon1 list">
-					<li><h3>No Products</h3><a href=""></a></li>
-					<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-				</ul>
-			</li>
-		</ul>
-	    <ul class="last"><li><a href="#">Cart(0)</a></li></ul>
-	  </div>
-    </div>
-     <div class="clear"></div>
-     </div>
-	</div>
 <div class="mens">    
   <div class="main">
      <div class="wrap">
-     	<ul class="breadcrumb breadcrumb__t"><a class="home" href="#">Home</a> / <a href="#">Dolor sit amet</a> / Lorem ipsum dolor sit amet</ul>
+     	<ul class="breadcrumb breadcrumb__t"><a class="home" href="#">Home</a> / <a href="#">Restaurant</a> / Nha hang thien duong</ul>
 		<div class="cont span_2_of_3">
 		  	<div class="grid images_3_of_2">
 						<ul id="etalage">
@@ -227,7 +71,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img class="etalage_source_image" src="web/images/s1.jpg" class="img-responsive" title="" />
 								</a>
 							</li>
-							<li>
+							<!-- <li>
 								<img class="etalage_thumb_image" src="web/images/s-img1.jpg" class="img-responsive" />
 								<img class="etalage_source_image" src="web/images/s2.jpg" class="img-responsive" title="" />
 							</li>
@@ -238,30 +82,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    <li>
 								<img class="etalage_thumb_image" src="web/images/s4.jpg" class="img-responsive"  />
 								<img class="etalage_source_image" src="web/images/s-img3.jpg" class="img-responsive"  />
-							</li>
+							</li> -->
 						</ul>
 						 <div class="clearfix"></div>
 	            </div>
 		         <div class="desc1 span_3_of_2">
-		         	<h3 class="m_3">Lorem ipsum dolor sit amet</h3>
-		             <p class="m_5">Rs. 888 <span class="reducedfrom">Rs. 999</span> <a href="#">click for offer</a></p>
+		         	<h3 class="m_3">Nha Hang com nieu</h3>
+		         	<h3 >Dia Chi: 123 Hung vuong, Da Nang</h3>
+		         	<h3 >Gio mo cua: 7:00 -22:00</h3>
+		         	<h3 >Kieu nha hang:</h3>
+		             <p class="m_5">Gia : 30.000 : 50.000 vnd</p> 
 		         	 <div class="btn_form">
 						<form>
-							<input type="submit" value="buy" title="">
+							<input type="submit" value="Rate" title="">
 						</form>
 					 </div>
-					<span class="m_link"><a href="#">login to save in wishlist</a> </span>
-				     <p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit </p>
+					<!-- <span class="m_link">Mo ta: </span>
+				     <p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit </p> -->
 			     </div>
 			   <div class="clear"></div>	
 	    <div class="clients">
-	    <h3 class="m_3">10 Other Products in the same category</h3>
+	    <h3 class="m_3">Mon an trong nha hang</h3>
 		 <ul id="flexiselDemo3">
-			<li><img src="web/images/s5.jpg" /><a href="#">Category</a><p>Rs 600</p></li>
-			<li><img src="web/images/s6.jpg" /><a href="#">Category</a><p>Rs 850</p></li>
-			<li><img src="web/images/s7.jpg" /><a href="#">Category</a><p>Rs 900</p></li>
-			<li><img src="web/images/s8.jpg" /><a href="#">Category</a><p>Rs 550</p></li>
-			<li><img src="web/images/s9.jpg" /><a href="#">Category</a><p>Rs 750</p></li>
+			<li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
+			<li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
+			<li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
+			<li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
 		 </ul>
 	<script type="text/javascript">
 		$(window).load(function() {
@@ -312,261 +158,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script type="text/javascript" src="web/js/jquery.flexisel.js"></script>
      </div>
      <div class="toogle">
-     	<h3 class="m_3">Product Details</h3>
+     	<h3 class="m_3">Thong tin nha hang</h3>
      	<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
      </div>
-     <div class="toogle">
-     	<h3 class="m_3">More Information</h3>
-     	<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-     </div>
-      </div>
-			<div class="rsingle span_1_of_single">
-				<h5 class="m_1">Categories</h5>
-					<select class="dropdown" tabindex="8" data-settings='{"wrapperClass":"metro"}'>
-						<option value="1">Mens</option>
-						<option value="2">Sub Category1</option>
-						<option value="3">Sub Category2</option>
-						<option value="4">Sub Category3</option>
-					</select>
-					<select class="dropdown" tabindex="8" data-settings='{"wrapperClass":"metro"}'>
-						<option value="1">Womens</option>
-						<option value="2">Sub Category1</option>
-						<option value="3">Sub Category2</option>
-						<option value="4">Sub Category3</option>
-					</select>
-					<ul class="kids">
-						<li><a href="#">Kids</a></li>
-						<li class="last"><a href="#">Glasses Shop</a></li>
-					</ul>
-                   <section  class="sky-form">
-					<h4>Price</h4>
-						<div class="row row1 scroll-pane">
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Rs 500 - Rs 700</label>
-							</div>
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 700 - Rs 1000</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 1000 - Rs 1500</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 1500 - Rs 2000</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 2000 - Rs 2500</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Rs 2500 - Rs 3000</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 3500 - Rs 4000</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 4000 - Rs 4500</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 4500 - Rs 5000</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 5000 - Rs 5500</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 5500 - Rs 6000</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 6000 - Rs 6500</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 6500 - Rs 7000</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 7000 - Rs 7500</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 7500 - Rs 8000</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rs 8000 - Rs 8500</label>	
-							</div>
-						</div>
-		        </section>
-		       <section  class="sky-form">
-					<h4>Brand Name</h4>
-						<div class="row row1 scroll-pane">
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>John Jacobs</label>
-							</div>
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Tag Heuer</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Lee Cooper</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Mikli</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>S Oliver</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Hackett</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Killer</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>IDEE</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Vogue</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Gunnar</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Accu Reader</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>CAT</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Excellent</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Feelgood</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Odysey</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Animal</label>	
-							</div>
-						</div>
-		       </section>
-		       <section  class="sky-form">
-					<h4>Frame Shape</h4>
-						<div class="row row1 scroll-pane">
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Pilot</label>
-							</div>
-							<div class="col col-4">
-							    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rectangle</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Square</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Round</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Others</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Cat Eyes</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Wrap Around</label>
-						    </div>
-						</div>
-		       </section>
-		       <section  class="sky-form">
-					<h4>Frame Size</h4>
-						<div class="row row1 scroll-pane">
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Small</label>
-							</div>
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Medium</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Large</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Medium</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Large</label>
-							</div>
-						</div>
-		       </section>
-		       <section  class="sky-form">
-					<h4>Frame Type</h4>
-						<div class="row row1 scroll-pane">
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Full Rim</label>
-							</div>
-							<div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rim Less</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Half Rim</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Rim Less</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Half Rim</label>
-							</div>
-						</div>
-		       </section>
-		       <section  class="sky-form">
-					<h4>Colors</h4>
-						<ul class="color-list">
-							<li><a href="#"> <span class="color1"> </span><p class="red">Red</p></a></li>
-							<li><a href="#"> <span class="color2"> </span><p class="red">Green</p></a></li>
-							<li><a href="#"> <span class="color3"> </span><p class="red">Blue</p></a></li>
-							<li><a href="#"> <span class="color4"> </span><p class="red">Yellow</p></a></li>
-							<li><a href="#"> <span class="color5"> </span><p class="red">Violet</p></a></li>
-							<li><a href="#"> <span class="color6"> </span><p class="red">Orange</p></a></li>
-							<li><a href="#"> <span class="color7"> </span><p class="red">Gray</p></a></li>
-					   </ul>
-		       </section>
-		       <script src="web/js/jquery.easydropdown.js"></script>
-		      </div
-		      <div class="clear"></div>
+           </div>
+			
+	 <?php
+	require_once 'web/inc/menuSearch.php';
+	?>
+
 			</div>
 			 <div class="clear"></div>
 		   </div>
 		</div>
-	<div class="footer">
-		<div class="footer-top">
-			<div class="wrap">
-			  <div class="section group example">
-				<div class="col_1_of_2 span_1_of_2">
-					<ul class="f-list">
-					  <li><img src="web/images/2.png"><span class="f-text">Free Shipping on orders over $ 100</span><div class="clear"></div></li>
-					</ul>
-				</div>
-				<div class="col_1_of_2 span_1_of_2">
-					<ul class="f-list">
-					  <li><img src="web/images/3.png"><span class="f-text">Call us! toll free-222-555-6666 </span><div class="clear"></div></li>
-					</ul>
-				</div>
-				<div class="clear"></div>
-		      </div>
-			</div>
-		</div>
-		<div class="footer-middle">
-			<div class="wrap">
-			  <div class="section group example">
-			  <div class="col_1_of_f_1 span_1_of_f_1">
-				 <div class="section group example">
-				   <div class="col_1_of_f_2 span_1_of_f_2">
-				      <h3>Facebook</h3>
-						<script>(function(d, s, id) {
-						  var js, fjs = d.getElementsByTagName(s)[0];
-						  if (d.getElementById(id)) return;
-						  js = d.createElement(s); js.id = id;
-						  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-						  fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));</script>
-						<div class="like_box">	
-							<div class="fb-like-box" data-href="http://www.facebook.com/w3layouts" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
-						</div>
- 				  </div>
-				  <div class="col_1_of_f_2 span_1_of_f_2">
-						<h3>From Twitter</h3>
-				       <div class="recent-tweet">
-							<div class="recent-tweet-icon">
-								<span> </span>
-							</div>
-							<div class="recent-tweet-info">
-								<p>Ds which don't look even slightly believable. If you are <a href="#">going to use nibh euismod</a> tincidunt ut laoreet adipisicing</p>
-							</div>
-							<div class="clear"> </div>
-					   </div>
-					   <div class="recent-tweet">
-							<div class="recent-tweet-icon">
-								<span> </span>
-							</div>
-							<div class="recent-tweet-info">
-								<p>Ds which don't look even slightly believable. If you are <a href="#">going to use nibh euismod</a> tincidunt ut laoreet adipisicing</p>
-							</div>
-							<div class="clear"> </div>
-					  </div>
-				</div>
-				<div class="clear"></div>
-		      </div>
- 			 </div>
-			 <div class="col_1_of_f_1 span_1_of_f_1">
-			   <div class="section group example">
-				 <div class="col_1_of_f_2 span_1_of_f_2">
-				    <h3>Information</h3>
-						<ul class="f-list1">
-						    <li><a href="#">Duis autem vel eum iriure </a></li>
-				            <li><a href="#">anteposuerit litterarum formas </a></li>
-				            <li><a href="#">Tduis dolore te feugait nulla</a></li>
-				             <li><a href="#">Duis autem vel eum iriure </a></li>
-				            <li><a href="#">anteposuerit litterarum formas </a></li>
-				            <li><a href="#">Tduis dolore te feugait nulla</a></li>
-			         	</ul>
- 				 </div>
-				 <div class="col_1_of_f_2 span_1_of_f_2">
-				   <h3>Contact us</h3>
-						<div class="company_address">
-					                <p>500 Lorem Ipsum Dolor Sit,</p>
-							   		<p>22-56-2-9 Sit Amet, Lorem,</p>
-							   		<p>USA</p>
-					   		<p>Phone:(00) 222 666 444</p>
-					   		<p>Fax: (000) 000 00 00 0</p>
-					 	 	<p>Email: <span>mail[at]leoshop.com</span></p>
-					   		
-					   </div>
-					   <div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Google"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Linked in"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Rss"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
-				</div>
-				<div class="clear"></div>
-		    </div>
-		   </div>
-		  <div class="clear"></div>
-		    </div>
-		  </div>
-		</div>
-		<div class="footer-bottom">
-			<div class="wrap">
-	                <div class="copy">
-			           <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
-		            </div>
-		       <div class="f-list2">
-				<ul>
-					<li class="active"><a href="about.php">About Us</a></li> |
-					<li><a href="delivery.php">Delivery & Returns</a></li> |
-					<li><a href="delivery.php">Terms & Conditions</a></li> |
-					<li><a href="contact.php">Contact Us</a></li> 
-				</ul>
-			  </div>
-				<div class="clear"></div>
-		      </div>
-			</div>
-		</div>
-</body>
-</html>
+ <?php
+require_once 'web/inc/footer.php';
+?>
