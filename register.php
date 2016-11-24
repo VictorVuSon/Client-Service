@@ -27,7 +27,7 @@ require_once 'web/inc/header.php';
 		         		<input type="text" value="City" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'City';}">
 		         	</div>
 		         	<div>
-		         		<input type="z" value="phonenumber" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'City';}">
+		         		<input type="text" value="Phonenumber" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phonenumber';}">
 		         	</div>
 		          	<input type="submit" name="Submit" class="button" value="Register"><div class="clear"></div>
 		          </div>

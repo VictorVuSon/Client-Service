@@ -84,7 +84,6 @@ function loadRestaurant() {
                         <ul id="etalage">
                             <li>
                                 <a href="#" class="img">
-                                    
                                 </a>
                             </li>
                         </ul>
@@ -113,68 +112,70 @@ function loadRestaurant() {
                             <li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
                             <li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
                         </ul>
-                        <script type="text/javascript">
-                            $(window).load(function () {
-                                $("#flexiselDemo1").flexisel();
-                                $("#flexiselDemo2").flexisel({
-                                    enableResponsiveBreakpoints: true,
-                                    responsiveBreakpoints: {
-                                        portrait: {
-                                            changePoint: 480,
-                                            visibleItems: 1
-                                        },
-                                        landscape: {
-                                            changePoint: 640,
-                                            visibleItems: 2
-                                        },
-                                        tablet: {
-                                            changePoint: 768,
-                                            visibleItems: 3
-                                        }
-                                    }
-                                });
+        <script type="text/javascript">
+            $(window).load(function () {
+                $("#flexiselDemo1").flexisel();
+                $("#flexiselDemo2").flexisel({
+                    enableResponsiveBreakpoints: true,
+                    responsiveBreakpoints: {
+                        portrait: {
+                            changePoint: 480,
+                            visibleItems: 1
+                        },
+                        landscape: {
+                            changePoint: 640,
+                            visibleItems: 2
+                        },
+                        tablet: {
+                            changePoint: 768,
+                            visibleItems: 3
+                        }
+                    }
+                });
 
-                                $("#flexiselDemo3").flexisel({
-                                    visibleItems: 5,
-                                    animationSpeed: 1000,
-                                    autoPlay: false,
-                                    autoPlaySpeed: 3000,
-                                    pauseOnHover: true,
-                                    enableResponsiveBreakpoints: true,
-                                    responsiveBreakpoints: {
-                                        portrait: {
-                                            changePoint: 480,
-                                            visibleItems: 1
-                                        },
-                                        landscape: {
-                                            changePoint: 640,
-                                            visibleItems: 2
-                                        },
-                                        tablet: {
-                                            changePoint: 768,
-                                            visibleItems: 3
-                                        }
-                                    }
-                                });
+            $("#flexiselDemo3").flexisel({
+                visibleItems: 5,
+                animationSpeed: 1000,
+                autoPlay: false,
+                autoPlaySpeed: 3000,    		
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: { 
+                    portrait: { 
+                        changePoint:480,
+                        visibleItems: 1
+                    }, 
+                    landscape: { 
+                        changePoint:640,
+                        visibleItems: 2
+                    },
+                    tablet: { 
+                        changePoint:768,
+                        visibleItems: 3
+                    }
+                }
+            });
+            
+        });
+	</script>
+	<script type="text/javascript" src="web/js/jquery.flexisel.js"></script>
+     </div>
+     <div class="toogle">
+     	<h3 class="m_3">Thong tin nha hang</h3>
+     	<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+     </div>
+     </div>
+			
+	 <?php
+	require_once 'web/inc/menuSearch.php';
+	?>
+>>>>>>> df01e5c28422c4c420581532696f5ecf9b140abc
 
-                            });
-                        </script>
-                        <script type="text/javascript" src="web/js/jquery.flexisel.js"></script>
-                    </div>
-                    <div class="toogle">
-                        <h3 class="m_3">Thong tin nha hang</h3>
-                        <p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-                    </div>
-                </div>
-
-                <?php
-                require_once 'web/inc/menuSearch.php';
-                ?>
-
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <?php
-    require_once 'web/inc/footer.php';
-    ?>
+			</div>
+			 <div class="clear"></div>
+		   </div>
+		</div>
+		<div class="fb-comments" data-href="http://localhost/Foody-client/Client-Service/" data-width="800px" data-numposts="5"></div>
+ <?php
+require_once 'web/inc/footer.php';
+?>

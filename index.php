@@ -1,12 +1,8 @@
-<?php
-require_once 'web/inc/header.php';
+<?php require_once 'web/inc/header.php';
 ?>
 <?php
 require_once 'web/inc/slide.php';
 ?>
-<!--<input type ="button" onclick ="loadHomePage()" value="Load" />-->
-
-<!--<input type="button" value ="session" onclick="loadSession()"></input>-->
 <script type="text/javascript">
     function addElement(id, name, address, rate, image, isChange, divId) {
         var div = '<div class="col_1_of_3 span_1_of_3">'
