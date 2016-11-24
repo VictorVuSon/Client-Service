@@ -16,46 +16,81 @@ require_once 'web/inc/header.php';
 <script type="text/javascript" src="web/js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script> -->
 <script type="text/javascript" src="web/js/jquery.jscrollpane.min.js"></script>
-		<script type="text/javascript" id="sourcecode">
-			$(function()
-			{
-				$('.scroll-pane').jScrollPane();
-			});
-		</script>
+<script type="text/javascript" id="sourcecode">
+    $(function ()
+    {
+        $('.scroll-pane').jScrollPane();
+    });
+</script>
 <!-- start details -->
 <script src="web/js/slides.min.jquery.js"></script>
-   <script>
-		$(function(){
-			$('#products').slides({
-				preload: true,
-				preloadImage: 'img/loading.gif',
-				effect: 'slide, fade',
-				crossfade: true,
-				slideSpeed: 350,
-				fadeSpeed: 500,
-				generateNextPrev: true,
-				generatePagination: false
-			});
-		});
-	</script>
+<script>
+    $(function () {
+        $('#products').slides({
+            preload: true,
+            preloadImage: 'img/loading.gif',
+            effect: 'slide, fade',
+            crossfade: true,
+            slideSpeed: 350,
+            fadeSpeed: 500,
+            generateNextPrev: true,
+            generatePagination: false
+        });
+    });
+</script>
 <link rel="stylesheet" href="web/css/etalage.css">
 <script src="web/js/jquery.etalage.min.js"></script>
 <script>
-			jQuery(document).ready(function($){
+    jQuery(document).ready(function ($) {
 
-				$('#etalage').etalage({
-					thumb_image_width: 360,
-					thumb_image_height: 360,
-					source_image_width: 900,
-					source_image_height: 900,
-					show_hint: true,
-					click_callback: function(image_anchor, instance_id){
-						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-					}
-				});
+        $('#etalage').etalage({
+            thumb_image_width: 360,
+            thumb_image_height: 360,
+            source_image_width: 900,
+            source_image_height: 900,
+            show_hint: true,
+            click_callback: function (image_anchor, instance_id) {
+                alert('Callback example:\nYou clicked on an image with the anchor: "' + image_anchor + '"\n(in Etalage instance: "' + instance_id + '")');
+            }
+        });
 
-			});
-		</script>	
+    });
+</script>
+<script>
+function loadHomePage() {
+        var position = 0;
+        var divId = 0;
+        var isChange = false;
+        $.ajax({
+            url: 'http://localhost/userYii2/api/web/index.php/restaurant/index',
+            type: 'GET',
+            cache: false,
+            headers: {Authorization: TOKEN},
+            success: function (data) {
+                var arrRestaurant = data.data;
+                console.log(arrRestaurant);
+                arrRestaurant.forEach(function (restaurant) {
+                    isChange = false;
+                    position++;
+                    if((((position - 1) % 3) === 0) && (position != 1)){
+                        isChange = true;
+                        divId ++ ;
+                    }
+                    var name = restaurant.name;
+                    var id = restaurant.id;
+                    var address = restaurant.address.name+'-'+ restaurant.address.number +'-'+restaurant.address.street +'-'+ restaurant.address.district.name +'-'+ restaurant.address.district.city.name;
+                    var rate = restaurant.point ;
+                    var image = "http://localhost/userYii2/backend/web/uploads/"+restaurant.image;
+                  //  addElement(id, name, address, rate, image, isChange, divId);
+                });
+            },
+            error: function () {
+                alert('Something went wrong!');
+            }
+        });
+        return false;
+    }
+</script>
 </head>
 <body>
 <div class="mens">    
