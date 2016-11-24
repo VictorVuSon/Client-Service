@@ -28,6 +28,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="web/js/js_const.js"></script>
         <!--end slider -->
         <script src="web/js/jquery.easydropdown.js"></script>
+        <script>
+</script>
     </head>
     <body>
         <div class="header-top">
