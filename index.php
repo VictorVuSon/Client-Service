@@ -1,4 +1,4 @@
-require_once 'web/inc/header.php';
+<?php require_once 'web/inc/header.php';
 ?>
 <?php
 require_once 'web/inc/slide.php';
