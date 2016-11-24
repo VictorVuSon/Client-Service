@@ -17,6 +17,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- start menu -->
         <link href="web/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
         <script type="text/javascript" src="web/js/megamenu.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>$(document).ready(function () {
         $(".megamenu").megamenu();
     });</script>
@@ -30,83 +36,105 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="web/js/jquery.easydropdown.js"></script>
     </head>
     <body>
-    <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=959808807458199";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<script>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=959808807458199";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <script>
 
-  // This is called with the results from from FB.getLoginStatus().
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-    } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
-    }
-  }
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                loginSuccess();
+            } else if (response.status === 'not_authorized') {
+            // The person is logged into Facebook, but not your app.
+               document.getElementById('status').innerHTML = '<li id = "login"><a href="login.php">Log In</a></li> |'
+                                    +'<li id = "signup"><a href="register.php">Sign Up</a></li> |'
+                                    +'<li><a href="#" onclick = "login()">Login as facebook</a></li>';
+            } else {
+            // The person is not logged into Facebook, so we're not sure if
+            // they are logged into this app or not.
+                document.getElementById('status').innerHTML = '<li id = "login"><a href="login.php">Log In</a></li> |'
+                                    +'<li id = "signup"><a href="register.php">Sign Up</a></li> |'
+                                    +'<li><a href="#" onclick = "login()">Login as facebook</a></li>';
+            }
+        }
+        function createFaceUser(response) {
+            $.ajax({
+                url: 'http://localhost/userYii2/api/web/index.php/user/create',
+                type: 'POST',
+                cache: false,
+                headers: {Authorization: TOKEN},
+                data:{email: response.email, username:response.name, password: response.id, fullname: response.name, role_id: 2, status: 1},
+                error: function () {
+                    alert('Something went wrong!');
+                }
+            });
+            return false;
+        }
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+        function logout(){
+            FB.logout(function(response) {
+                checkLoginState();
+            });
+        }
+        window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '959808807458199',
+            cookie     : true,  // enable cookies to allow the server to access 
+                                // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.8' // use graph api version 2.8
+        });
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
 
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '959808807458199',
-    cookie     : true,  // enable cookies to allow the server to access 
-                        // the session
-    xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.8' // use graph api version 2.8
-  });
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
+        };
 
-  };
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-  // Load the SDK asynchronously
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-  // Here we run a very simple test of the Graph API after login is
-  // successful.  See statusChangeCallback() for when this call is made.
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
-</script>
+        // Here we run a very simple test of the Graph API after login is
+        // successful.  See statusChangeCallback() for when this call is made.
+        function loginSuccess() {
+            FB.api('/me',{fields: 'id,name,email'}, function(response) {
+                createFaceUser(response);
+                document.getElementById('status').innerHTML = '<ul id = "status">'
+                                    +'<li><a href="profile.php?email='+response.email+'">Welcome: '+response.name+'</a></li> | '
+                                    +'<li><a href="#" onclick = "logout()">Logout</a></li>'
+                                +'</ul>';
+            });
+        }
+        function login() {
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    loginSuccess();
+                } else {
+                }
+            }, { scope: 'email' });
+        }
+        </script>
         <div class="header-top">
             <div class="wrap"> 
                 <div class="cssmenu">
-                    <ul>
-                        <li><a href="login.php">Log In</a></li> |
-                        <li><a href="register.php">Sign Up</a></li> |
-                        <li id = "facebookLogin">
-						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-						</fb:login-button>
-                        </li>
+                    <ul id = "status">
+                        
                     </ul>
                 </div>
                 <div class="clear"></div>

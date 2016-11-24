@@ -93,6 +93,22 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+  function logout(){
+    FB.logout(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+  function login() {
+    FB.login(function(response) {
+        if (response.authResponse) {
+            // connected
+        testAPI();
+        } else {
+            // cancelled
+        }
+    }, { scope: 'email' });
+    }
+  
 </script>
 
 <!--
@@ -100,9 +116,8 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
+<input type = "button" onclick="login();" value = "login" />
+<input type = "button" onclick="logout();" value = "logout" />
 
 <div id="status">
 </div>

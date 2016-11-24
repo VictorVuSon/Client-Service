@@ -68,7 +68,6 @@ require_once 'web/inc/slide.php';
             headers: {Authorization: TOKEN},
             success: function (data) {
                 var arrRestaurant = data.data;
-                console.log(arrRestaurant);
                 arrRestaurant.forEach(function (restaurant) {
                     isChange = false;
                     position++;
