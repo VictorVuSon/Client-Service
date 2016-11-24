@@ -32,7 +32,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </script>
     </head>
     <body>
-    <script>(function(d, s, id) {
+<script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
@@ -99,10 +99,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
   }
 </script>
+<script>
+    function loadMenu(){
+        if(sessionsto)
+    }
+</script>
         <div class="header-top">
             <div class="wrap"> 
                 <div class="cssmenu">
-                    <ul>
+                    <ul id ="menu">
                         <li><a href="login.php">Log In</a></li> |
                         <li><a href="register.php">Sign Up</a></li> |
                         <li id = "facebookLogin">
