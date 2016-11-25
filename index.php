@@ -1,6 +1,5 @@
-<?php require_once 'web/inc/header.php';
-?>
 <?php
+require_once 'web/inc/header.php';
 require_once 'web/inc/slide.php';
 ?>
 <script type="text/javascript">
@@ -108,9 +107,9 @@ require_once 'web/inc/slide.php';
                     <link href="web/css/nivo-slider.css" rel="stylesheet" type="text/css" media="all" />
                     <script src="web/js/jquery.nivo.slider.js"></script>
                     <script type="text/javascript">
-        $(window).load(function () {
-            $('#slider').nivoSlider();
-        });
+                        $(window).load(function () {
+                            $('#slider').nivoSlider();
+                        });
                     </script>
                     <div class="slider-wrapper theme-default">
                         <div id="slider" class="nivoSlider">
@@ -119,7 +118,6 @@ require_once 'web/inc/slide.php';
                             <img src="web/images/t-img3.jpg"  alt="" />
                         </div>
                     </div>
-                    <div class="btn"><a href="single.php">Check it Out</a></div>
                 </div>
                 <div class="top-border"> </div>
             </div>
