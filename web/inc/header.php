@@ -37,8 +37,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="web/js/js_const.js"></script>
         <!--end slider -->
         <script src="web/js/jquery.easydropdown.js"></script>
+        <script>
+</script>
     </head>
     <body>
+
         <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -48,7 +51,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             }(document, 'script', 'facebook-jssdk'));
         </script>
         <script>
-
         // This is called with the results from from FB.getLoginStatus().
         function statusChangeCallback(response) {
             if (response.status === 'connected') {
@@ -68,6 +70,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             }
         }
         function createFaceUser(response) {
+            console.log(response);
             $.ajax({
                 url: 'http://localhost/userYii2/api/web/index.php/user/create',
                 type: 'POST',
@@ -113,6 +116,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
+
         // Here we run a very simple test of the Graph API after login is
         // successful.  See statusChangeCallback() for when this call is made.
         function loginSuccess() {
@@ -133,11 +137,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             }, { scope: 'email' });
         }
         </script>
+        <script>
+            // check login with account
+            function loginAccount(){
+                if()
+            }
+        </script>
         <div class="header-top">
             <div class="wrap"> 
                 <div class="cssmenu">
                     <ul id = "status">
-                        
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -158,7 +167,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="megapanel">
                                     <div class="col1">
                                         <div class="h_nav">
-                                            <h4>Top tuan</h4>
+                                            <h4>Nha Hang</h4>
                                             <ul>
                                                 <li><a href="mens.php">Nha hang Y</a></li>
                                                 <li><a href="mens.php">Nha Hang Nhat</a></li>

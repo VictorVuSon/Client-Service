@@ -1,20 +1,6 @@
 <?php
 require_once 'web/inc/header.php';
 ?>
-<!-- <!DOCTYPE HTML>
-<html>
-<head>
-<title>Free Leoshop Website Template | Single:: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="web/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="web/css/form.css" rel="stylesheet" type="text/css" media="all" />
-<link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
-<script src="web/js/jquery1.min.js"></script> -->
-<!-- start menu -->
-<!-- <link href="web/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="web/js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script> -->
 <script type="text/javascript" src="web/js/jquery.jscrollpane.min.js"></script>
 <script type="text/javascript" id="sourcecode">
     $(function ()
@@ -40,6 +26,34 @@ require_once 'web/inc/header.php';
 </script>
 <link rel="stylesheet" href="web/css/etalage.css">
 <script src="web/js/jquery.etalage.min.js"></script>
+
+<script>
+function loadRestaurant() {
+        var id = '<?php echo $_GET['id'];?>';
+        $.ajax({
+            url: 'http://localhost/userYii2/api/web/index.php/restaurant/view?id='+id+'',
+            type: 'GET',
+            cache: false,
+            headers: {Authorization: TOKEN},
+            success: function (response) {
+                var restaurant = response.data;
+                var image = "http://localhost/userYii2/backend/web/uploads/"+restaurant.image;
+                $(".name").append(restaurant.name);
+                $(".link").append(restaurant.name);
+                $(".address").append(restaurant.address.name+'-'+ restaurant.address.number +'-'+restaurant.address.street +'-'+ restaurant.address.district.name +'-'+ restaurant.address.district.city.name);
+                $(".time").append(restaurant.time_open+'-'+restaurant.time_close);
+                $(".category").append(restaurant.category.name);
+                $(".price3").append(restaurant.price_min+'-'+restaurant.price_max);
+                $(".img").append('<img class="etalage_thumb_image image" src="'+ image +'" class="img-responsive" />'
+                        +'<img class="etalage_source_image" src="'+ image +'" class="img-responsive" title="" />');
+            },
+            error: function () {
+                alert('Something went wrong!');
+            }
+        });
+        return false;
+    }
+</script>
 <script>
     jQuery(document).ready(function ($) {
 
@@ -56,139 +70,93 @@ require_once 'web/inc/header.php';
 
     });
 </script>
-<script>
-function loadHomePage() {
-        var position = 0;
-        var divId = 0;
-        var isChange = false;
-        $.ajax({
-            url: 'http://localhost/userYii2/api/web/index.php/restaurant/index',
-            type: 'GET',
-            cache: false,
-            headers: {Authorization: TOKEN},
-            success: function (data) {
-                var arrRestaurant = data.data;
-                console.log(arrRestaurant);
-                arrRestaurant.forEach(function (restaurant) {
-                    isChange = false;
-                    position++;
-                    if((((position - 1) % 3) === 0) && (position != 1)){
-                        isChange = true;
-                        divId ++ ;
-                    }
-                    var name = restaurant.name;
-                    var id = restaurant.id;
-                    var address = restaurant.address.name+'-'+ restaurant.address.number +'-'+restaurant.address.street +'-'+ restaurant.address.district.name +'-'+ restaurant.address.district.city.name;
-                    var rate = restaurant.point ;
-                    var image = "http://localhost/userYii2/backend/web/uploads/"+restaurant.image;
-                  //  addElement(id, name, address, rate, image, isChange, divId);
-                });
-            },
-            error: function () {
-                alert('Something went wrong!');
-            }
-        });
-        return false;
-    }
-</script>
-</head>
 <body>
-<div class="mens">    
-  <div class="main">
-     <div class="wrap">
-     	<ul class="breadcrumb breadcrumb__t"><a class="home" href="#">Home</a> / <a href="#">Restaurant</a> / Nha hang thien duong</ul>
-		<div class="cont span_2_of_3">
-		  	<div class="grid images_3_of_2">
-						<ul id="etalage">
-							<li>
-								<a href="optionallink.php">
-									<img class="etalage_thumb_image" src="web/images/s-img.jpg" class="img-responsive" />
-									<img class="etalage_source_image" src="web/images/s1.jpg" class="img-responsive" title="" />
-								</a>
-							</li>
-							<!-- <li>
-								<img class="etalage_thumb_image" src="web/images/s-img1.jpg" class="img-responsive" />
-								<img class="etalage_source_image" src="web/images/s2.jpg" class="img-responsive" title="" />
-							</li>
-							<li>
-								<img class="etalage_thumb_image" src="web/images/s-img2.jpg" class="img-responsive"  />
-								<img class="etalage_source_image" src="web/images/s3.jpg" class="img-responsive"  />
-							</li>
-						    <li>
-								<img class="etalage_thumb_image" src="web/images/s4.jpg" class="img-responsive"  />
-								<img class="etalage_source_image" src="web/images/s-img3.jpg" class="img-responsive"  />
-							</li> -->
-						</ul>
-						 <div class="clearfix"></div>
-	            </div>
-		         <div class="desc1 span_3_of_2">
-		         	<h3 class="m_3">Nha Hang com nieu</h3>
-		         	<h3 >Dia Chi: 123 Hung vuong, Da Nang</h3>
-		         	<h3 >Gio mo cua: 7:00 -22:00</h3>
-		         	<h3 >Kieu nha hang:</h3>
-		             <p class="m_5">Gia : 30.000 : 50.000 vnd</p> 
-		         	 <div class="btn_form">
-						<form>
-							<input type="submit" value="Rate" title="">
-						</form>
-					 </div>
-					<!-- <span class="m_link">Mo ta: </span>
-				     <p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit </p> -->
-			     </div>
-			   <div class="clear"></div>	
-	    <div class="clients">
-	    <h3 class="m_3">Mon an trong nha hang</h3>
-		 <ul id="flexiselDemo3">
-			<li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
-			<li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
-			<li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
-			<li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
-		 </ul>
-	<script type="text/javascript">
-		$(window).load(function() {
-			$("#flexiselDemo1").flexisel();
-			$("#flexiselDemo2").flexisel({
-				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: { 
-		    		portrait: { 
-		    			changePoint:480,
-		    			visibleItems: 1
-		    		}, 
-		    		landscape: { 
-		    			changePoint:640,
-		    			visibleItems: 2
-		    		},
-		    		tablet: { 
-		    			changePoint:768,
-		    			visibleItems: 3
-		    		}
-		    	}
-		    });
-		
-			$("#flexiselDemo3").flexisel({
-				visibleItems: 5,
-				animationSpeed: 1000,
-				autoPlay: false,
-				autoPlaySpeed: 3000,    		
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: { 
-		    		portrait: { 
-		    			changePoint:480,
-		    			visibleItems: 1
-		    		}, 
-		    		landscape: { 
-		    			changePoint:640,
-		    			visibleItems: 2
-		    		},
-		    		tablet: { 
-		    			changePoint:768,
-		    			visibleItems: 3
-		    		}
-		    	}
-		    });
-		    
-		});
+    <script>
+        window.onload = loadRestaurant();
+    </script>
+    <div class="wrap">
+    <div class="mens">    
+        <div class="main">
+            <div class="wrap">
+                <ul class="breadcrumb breadcrumb__t"><a class="home" href="#">Home</a> / <a href="#">Restaurant</a> / <span class ="link"></span></ul>
+                <div class="cont span_2_of_3">
+                    <div class="grid images_3_of_2">
+                        <ul id="etalage">
+                            <li>
+                                <a href="#" class="img">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="desc1 span_3_of_2">
+                        <h3 class="m_3 name"></h3>
+                        <h3 class ="address">Địa chỉ: </h3>
+                        <h3 class ="time">Giờ mở cửa: </h3>
+                        <h3 class ="category" >Kiểu Nhà hàng: </h3>
+                        <p class="m_5 price3">Giá: </p> 
+                        <div class="btn_form">
+                            <form>
+                                <input type="submit" value="Rate" title="">
+                            </form>
+                        </div>
+                       <!-- <span class="m_link">Mo ta: </span>
+                    <p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit </p> -->
+                    </div>
+                    <div class="clear"></div>	
+                    <div class="clients">
+                        <h3 class="m_3">Mon an trong nha hang</h3>
+                        <ul id="flexiselDemo3">
+                            <li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
+                            <li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
+                            <li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
+                            <li><img src="web/images/s5.jpg" /><a href="#">Ten mon</a><p>Gia:</p></li>
+                        </ul>
+        <script type="text/javascript">
+            $(window).load(function () {
+                $("#flexiselDemo1").flexisel();
+                $("#flexiselDemo2").flexisel({
+                    enableResponsiveBreakpoints: true,
+                    responsiveBreakpoints: {
+                        portrait: {
+                            changePoint: 480,
+                            visibleItems: 1
+                        },
+                        landscape: {
+                            changePoint: 640,
+                            visibleItems: 2
+                        },
+                        tablet: {
+                            changePoint: 768,
+                            visibleItems: 3
+                        }
+                    }
+                });
+
+            $("#flexiselDemo3").flexisel({
+                visibleItems: 5,
+                animationSpeed: 1000,
+                autoPlay: false,
+                autoPlaySpeed: 3000,    		
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: { 
+                    portrait: { 
+                        changePoint:480,
+                        visibleItems: 1
+                    }, 
+                    landscape: { 
+                        changePoint:640,
+                        visibleItems: 2
+                    },
+                    tablet: { 
+                        changePoint:768,
+                        visibleItems: 3
+                    }
+                }
+            });
+            
+        });
 	</script>
 	<script type="text/javascript" src="web/js/jquery.flexisel.js"></script>
      </div>
@@ -201,6 +169,7 @@ function loadHomePage() {
 	 <?php
 	require_once 'web/inc/menuSearch.php';
 	?>
+>>>>>>> df01e5c28422c4c420581532696f5ecf9b140abc
 
 			</div>
 			 <div class="clear"></div>
