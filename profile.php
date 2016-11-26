@@ -23,29 +23,11 @@ function getDetailUser(email) {
 	});
 	return false;
 }
-// get detail user
-function updateUser() {
-	// $.ajax({
-	// 	url: 'http://localhost/userYii2/api/web/index.php/user/detail',
-	// 	type: 'POST',
-	// 	cache: false,
-	// 	headers: {Authorization: TOKEN},
-	// 	data:{id: userId, email: },
-	// 	success: function (data) {
-	// 		$('#username').val(data.data.username);
-	// 		$('#email').val(data.data.email);
-	// 		$('#fullname').val(data.data.username);
-	// 	},
-	// 	error: function () {
-	// 		alert('Something went wrong!');
-	// 	}
-	// });
-	// return false;
-}
 // get list res
 function loadListRestaurant(){
 	$('#profile').hide();
 	$('#listRest').show();
+	$('#userId').val(userId);
 	
 }
 function delRestaurant(id, email){
@@ -111,14 +93,30 @@ window.onload = getDetailUser('<?php echo $email; ?>');
 				<button class="btn btn-default dropdown-toggle" onclick = "loadListRestaurant()">List restaurant</button>
 				<button class="btn btn-default dropdown-toggle" onclick = "loadProfile()">Profile</button>
 				<div id = "listRest" style = "display:none" >
-					<form id = "addNewRest" action = "" method = "post" >
+					<form id = "addNewRest" action = "" method = "post" enctype="multipart/form-data">
+						<input type="text" id = "userId" name = "userId" style = "display:none" value = "" />
 						<div>
-		   			 		<input type="text" required class="form-control" id = "restname" value="" placeholder = "Restaurant name"></div>
+		   			 		<input type="text" required class="form-control" name = "restname" id = "restname" value="" placeholder = "Restaurant name"></div>
 		    			<div>
+		    				<input type="text" required class="form-control" name = "detail" id = "detail" value="" placeholder = "Detail">
+		    			</div>
+						<div>
+		    				<input type="text" required class="form-control" name = "price_min" id = "price_min" value="" placeholder = "Min price">
+		    			</div>
+						<div>
+		    				<input type="text" required class="form-control" name = "price_max" id = "price_max" value="" placeholder = "Max price">
+		    			</div>
+						<div>
+		    				<input type="time" style = "width: 1055px; margin-bottom: 10px;" required class="form-control" name = "opentime" id = "opentime" value="" placeholder = "Open time">
+		    			</div>
+						<div>
+		    				<input type="time" style = "width: 1055px;" required class="form-control" name = "closetime" id = "closetime" value="" placeholder = "Close time">
+		    			</div>
+						<div>
 		    				<input type="text" required class="form-control" id = "detail" value="" placeholder = "Detail">
 		    			</div>
 						<div>
-		    				<input type="file" required name = "restarantImage" class="form-control">
+		    				<input type="file" style = "width: 1055px;" required name = "restarantImage" class="form-control">
 			    		</div>
 						<div>
 		    				<select name="rest_cat">
@@ -150,15 +148,20 @@ window.onload = getDetailUser('<?php echo $email; ?>');
 			    		</div>
 						<div class = "address">
 			    		</div>
-						<button class="btn btn-default dropdown-toggle" type = "submit">Add new</button>
+						<button class="btn btn-default dropdown-toggle" type = "submit" name = "addRest">Add new</button>
 					</form>
 					<?php
 						// add new restaurant
-						if(isset($_POST['them'])){
+						if(isset($_POST['addRest'])){
 							$restName = $mysqli->real_escape_string($_POST['restname']);
 							$detail = $mysqli->real_escape_string($_POST['detail']);
 							$rest_cat = $_POST['rest_cat'];
 							$address = $_POST['address'];
+							$opentime = $_POST['opentime'];
+							$price_min = $_POST['price_min'];
+							$price_max = $_POST['price_max'];
+							$userId = $_POST['userId'];
+							$closeTime = $_POST['closetime'];
 							$name = null;
 							//xử lý hình ảnh.
 							if($_FILES['restarantImage']['name']!=""){
@@ -169,19 +172,15 @@ window.onload = getDetailUser('<?php echo $email; ?>');
 								$duoianh = $arr_name[count($arr_name)-1];
 								$name = "file-".time().".".$duoianh;
 								//tạo link save ảnh.
-								$destination = $_SERVER['DOCUMENT_ROOT']."/files/$name";
+								$destination = $_SERVER['DOCUMENT_ROOT']."/Foody-client/Client-Service/files/$name";
 								$result = move_uploaded_file($tmp_name, $destination);
 							}
 							//truy vấn cơ sở dữ liệu
-							echo $restName;
-							echo $detail;
-							echo $rest_cat;
-							echo $address; die();
-							$query_add = "INSERT INTO restaurant()
-														VALUES ('$tenhoa','$name','$mota',$giacu,$giamoi,'$sanpham',$loaisanpham,'$chitiet')";
-							$result_add = $mysqli->query($query_add_hoa);
+							$query_add = "INSERT INTO restaurant(name, detail, image, restaurant_category_id, address_id, time_open, time_close, price_min, price_max, userId, point) VALUES ('$restName','$detail','$name',$rest_cat,'$address','$opentime', '$closeTime',$price_min,$price_max,$userId, 0)";
+							echo $query_add;
+							$result_add = $mysqli->query($query_add);
 							if($result_add){
-								header("location:indexNews.php?msg=Thêm thành công");
+								header("location:http://localhost/Foody-client/Client-Service");
 							} 
 						}
 					
@@ -205,7 +204,7 @@ window.onload = getDetailUser('<?php echo $email; ?>');
 								$point = ($arr_spkm['point']);
 						?>
 						<tr>
-							<td><?php echo $name ?></td>
+							<td><a href = "food.php?restId=<?php echo $id ?>&&name=<?php echo $name; ?>"><?php echo $name ?></a></td>
 							<td><?php echo $detail ?></td>
 							<td><?php echo $point ?></td>
 							<td><button onclick = "delRestaurant(<?php echo $id;?>,'<?php echo $email;?>')">Del</button></td>
@@ -260,3 +259,4 @@ window.onload = getDetailUser('<?php echo $email; ?>');
  <?php
 require_once 'web/inc/footer.php';
 ?>
+

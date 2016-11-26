@@ -5,7 +5,7 @@
 <div class = "address">
     <select name = "address">
         <option value = 0>Street</option>
-        <?php $query_spkm = "SELECT * FROM address WHERE id = $id";
+        <?php $query_spkm = "SELECT * FROM address WHERE district_id = $id";
             $result_spkm = $mysqli->query($query_spkm);
             while($arr_spkm = mysqli_fetch_assoc($result_spkm)){
                 $id = ($arr_spkm['id']);

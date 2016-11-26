@@ -25,10 +25,10 @@ require_once 'db.php';
                     $point = ($arr_spkm['point']);
             ?>
             <tr>
-                <td><?php echo $name ?></td>
+                <td><a href = "food.php?restId=<?php echo $id ?>&&name=<?php echo $name; ?>"><?php echo $name ?></a></td>
                 <td><?php echo $detail ?></td>
                 <td><?php echo $point ?></td>
-                <td><button onclick = "delRestaurant(<?php echo $id;?>)">Del</button></td>
+                <td><button onclick = "delRestaurant(<?php echo $id;?>, '<?php echo $email;?>')">Del</button></td>
             </tr>
             <?php } ?>
             </tbody>

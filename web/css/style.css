@@ -137,6 +137,12 @@ table {
 
 
 /* start editing from here */
+.nbs-flexisel-item>img {
+    cursor: pointer;
+    width: 130px !important;
+    height: 95px !important;
+    positon: relative;
+}
 #listRest .table {
     margin-bottom: 20px;
     width: 50% !important;
@@ -744,6 +750,7 @@ h2.head {
 
 .price {
     padding: 10px 0 0 0;
+    height: 135px;
 }
 
 .inner_content {
@@ -754,6 +761,8 @@ h2.head {
 .product_image {}
 
 .product_image img {
+    height: 170px;
+    width: 254px;
     display: block;
     border: 1px solid #f0f0f0;
 }

@@ -78,7 +78,7 @@ require_once 'web/inc/slide.php';
                     var id = restaurant.id;
                     var address = restaurant.address.name+'-'+ restaurant.address.number +'-'+restaurant.address.street +'-'+ restaurant.address.district.name +'-'+ restaurant.address.district.city.name;
                     var rate = restaurant.point ;
-                    var image = "http://localhost/userYii2/backend/web/uploads/"+restaurant.image;
+                    var image = "http://localhost/Foody-client/Client-Service/files/"+restaurant.image;
                     addElement(id, name, address, rate, image, isChange, divId);
                 });
             },
@@ -96,7 +96,7 @@ require_once 'web/inc/slide.php';
     <div class="wrap">
         <div class="section group">
             <div class="cont span_2_of_3">
-                <h2 class="head">Nha hang moi</h2>
+                <h2 class="head">Top restaurant</h2>
                 <div class="top-box" id = "0">
                 </div>	
             </div>
